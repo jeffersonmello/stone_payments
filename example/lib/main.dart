@@ -14,7 +14,7 @@ void main() async {
   final stonePaymentsPlugin = StonePayments();
   await stonePaymentsPlugin.activateStone(
     appName: 'My App',
-    stoneCode: '12345678',
+    stoneCode: '0',
   );
 
   runApp(const MyApp());
@@ -76,7 +76,10 @@ class _MyAppState extends State<MyApp> {
                 },
                 child: const Text('Comprar R\$5,00'),
               ),
-              Image.asset('assets/flutter5786.png'),
+              Image.asset(
+                'assets/flutter5786.png',
+                height: 100,
+              ),
               ElevatedButton(
                 onPressed: () async {
                   try {
